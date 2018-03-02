@@ -1,2 +1,2 @@
-# projecteuler
-solving the problems on projecteuler.net in python.
+#python problems
+solving the problems on in python.
