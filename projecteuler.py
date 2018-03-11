@@ -1,6 +1,3 @@
-'''
-The line of x's is to make searching a little harder...
-'''
 
 '''
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
