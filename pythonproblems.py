@@ -73,3 +73,50 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
 
+import sys
+import math
+
+def is_factor_prime(list_of_numbers, factor):
+  is_prime = False
+  for y in list_of_numbers:
+    if ((factor % y) == 0):
+      return is_prime
+  is_prime = True
+  return is_prime
+
+def find_largest_prime_factor(num):
+  
+  found_largest_prime = False
+  largest_prime = 0
+  list_of_numbers = []
+  square_root = int(math.sqrt(num))
+
+  while (found_largest_prime == False):
+
+    for x in range(3, square_root, 2):
+      if ((num % x) == 0):
+        factor = x
+        factor_prime = is_factor_prime(list_of_numbers, factor)
+        if (factor_prime == True):
+          largest_prime = factor
+      list_of_numbers.append(x)
+      found_largest_prime = True
+  return largest_prime
+
+print(find_largest_prime_factor(600851475143), "!")
+
+'''
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Problem 4
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+A palindromic number reads the same both ways. The 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+largest palindrome made from the product of two 2-digit
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+numbers is 9009 = 91 × 99.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Find the largest palindrome made from the product of 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+two 3-digit numbers.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+'''
