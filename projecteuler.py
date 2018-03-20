@@ -117,3 +117,71 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 two 3-digit numbers.
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
+
+def factor_check(plndrm, dgts):
+  
+  start = int("9" * dgts)
+  
+  for x in range (start, 0, -1):
+    
+    if ((int(plndrm) % x) == 0):
+      
+      string = str(int((int(plndrm)/x)))
+      
+      if (len(string) == dgts):
+        
+        print(x)
+        return True
+  
+  return False
+
+def largest_palindrome(digits):
+  
+  zeros = digits - 1
+  num = 1 * (10 ** zeros)
+  mx = int("9" * digits) ** 2
+  mn = num * num
+  
+  for x in range(mx, mn, -1):
+    
+    ptntl_plndrm = str(x)
+    length = len(ptntl_plndrm)
+    index_1 = 0
+    index_2 = length - 1
+    plndrm_ness = True
+    
+    while (index_1 < (int(length / 2))):
+      
+      if (ptntl_plndrm[index_1]==ptntl_plndrm[index_2]):
+      
+            index_1 += 1
+            index_2 -= 1
+      else:
+      
+        plndrm_ness = False
+        break
+      
+    if (plndrm_ness == True):
+      
+      plndrm_ness = factor_check(ptntl_plndrm, digits)
+      if (plndrm_ness == True):
+      
+        return ptntl_plndrm
+    
+  return "no palindrome"
+  
+print("answer" , largest_palindrome(3))
+
+'''
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Problem 5
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+2520 is the smallest number that can be divided by each
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+of the numbers from 1 to 10 without any remainder.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+What is the smallest positive number that is evenly 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+divisible by all of the numbers from 1 to 20?
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+'''
