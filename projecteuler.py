@@ -230,3 +230,29 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 numbers and the square of the sum.
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
+
+def sum_of_squares (topNum):
+  sum = 0
+  for x in range(1, topNum + 1):
+    sum += (x**2)
+  return(sum)
+  
+def square_of_sum (topNum):
+  sum = 0
+  for x in range(1, topNum + 1):
+    sum += x
+  return(sum ** 2)
+  
+sm_sq = sum_of_squares (100)
+sq_sm = square_of_sum (100)
+print(sq_sm - sm_sq)
+
+'''
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+By listing the first six prime numbers: 2, 3, 5, 7, 11,
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+and 13, we can see that the 6th prime is 13.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+What is the 10 001st prime number?
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+'''
