@@ -185,3 +185,48 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 divisible by all of the numbers from 1 to 20?
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
+
+def smlst_pstv_nmbr (top_num):
+   
+  found_num = False
+  test_num = 2520
+  while (found_num == False):
+    print(test_num)
+    counter = 1
+    num_list = []
+    for x in range(top_num, 1, -1):
+      if ((test_num % x) != 0):
+        test_num += 2520
+        break
+      else:
+        num_list.append(x)
+        counter = counter + 1
+      if (counter == top_num):
+        num_list.append(1)
+        found_num = True
+        return test_num
+        
+  
+print(smlst_pstv_nmbr(20))
+
+'''
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The sum of the squares of the first ten natural numbers
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+is, 12 + 22 + ... + 102 = 385
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The square of the sum of the first ten natural numbers
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+is, (1 + 2 + ... + 10)2 = 552 = 3025
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Hence the difference between the sum of the squares of
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+the first ten natural numbers and the square of the sum
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+is 3025 − 385 = 2640. Find the difference between the 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+sum of the squares of the first one hundred natural
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+numbers and the square of the sum.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+'''
