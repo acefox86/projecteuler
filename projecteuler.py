@@ -211,6 +211,8 @@ print(smlst_pstv_nmbr(20))
 
 '''
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Problem 6
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 The sum of the squares of the first ten natural numbers
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 is, 12 + 22 + ... + 102 = 385
@@ -249,6 +251,8 @@ print(sq_sm - sm_sq)
 
 '''
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Problem 7
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 By listing the first six prime numbers: 2, 3, 5, 7, 11,
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 and 13, we can see that the 6th prime is 13.
@@ -256,3 +260,28 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 What is the 10 001st prime number?
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
+def n_prime (num):
+  prime_count = 1;
+  prime_list = [2]
+  x = 3
+  while (prime_count < num):
+    x_is_prime = check_prime(x)
+    if (x_is_prime == True):
+      prime_list.append(x)
+      prime_count += 1
+    x += 2
+      
+  return(prime_list[-1])    
+      
+def check_prime (x):
+  num_count = 1
+  for y in range (2 , x):
+    if ((x % y) == 0):
+      return False
+    else:
+      num_count += 1
+    
+    if (num_count == (x - 1)):
+      return True
+  
+print(n_prime(10001)) 
