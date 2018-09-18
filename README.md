@@ -1,2 +1,2 @@
-#python problems
-solving problems in python.
+#project euler problems
+solving project euler problems in python.
